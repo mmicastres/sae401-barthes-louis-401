@@ -1,0 +1,27 @@
+name: nomworkflow
+# Contrôle quand le workflow démarre :
+on:
+# sera lancé manuellement :
+  workflow_dispatch:
+# l'action choisie nécessite le paramètre sync :
+    inputs:
+      sync:
+        default: delta
+  # un workflow est une liste de tâches :
+jobs:
+  nomjob:
+    runs-on: ubuntu-latest
+    steps:
+# une tâche de vérification est systématiquement nécessaire
+      - name: vérification
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: téléversement SFTP
+        uses: milanmk/actions-file-deployer@master
+        with:
+          remote-protocol: sftp
+          remote-host: lyra
+          remote-user: lyra
+          remote-password: lek47269
+          remote-path: /home/lyra/www
