@@ -21,7 +21,7 @@ jobs:
         uses: milanmk/actions-file-deployer@master
         with:
           remote-protocol: sftp
-          remote-host: lyra
+          remote-host: ssh-lyra.alwaysdata.net
           remote-user: lyra
           remote-password: lek47269
           remote-path: /home/lyra/www
