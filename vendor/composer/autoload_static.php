@@ -49,6 +49,7 @@ class ComposerStaticInit35c7605daa2378912b2ab2ab13b1bffe
         'T' => 
         array (
             'TijsVerkoyen\\CssToInlineStyles\\' => 31,
+            'Thiagoprz\\CompositeKey\\' => 23,
             'Tests\\' => 6,
             'Termwind\\' => 9,
         ),
@@ -185,6 +186,10 @@ class ComposerStaticInit35c7605daa2378912b2ab2ab13b1bffe
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
             0 => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src',
+        ),
+        'Thiagoprz\\CompositeKey\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/thiagoprz/eloquent-composite-key/src',
         ),
         'Tests\\' => 
         array (
@@ -340,8 +345,8 @@ class ComposerStaticInit35c7605daa2378912b2ab2ab13b1bffe
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -518,7 +523,11 @@ class ComposerStaticInit35c7605daa2378912b2ab2ab13b1bffe
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\CATEGORIE' => __DIR__ . '/../..' . '/app/Models/CATEGORIE.php',
+        'App\\Models\\COMMENT' => __DIR__ . '/../..' . '/app/Models/COMMENT.php',
+        'App\\Models\\PROJECT' => __DIR__ . '/../..' . '/app/Models/PROJECT.php',
+        'App\\Models\\PROJECT_CATE' => __DIR__ . '/../..' . '/app/Models/PROJECT_CATE.php',
+        'App\\Models\\USER' => __DIR__ . '/../..' . '/app/Models/USER.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -635,7 +644,11 @@ class ComposerStaticInit35c7605daa2378912b2ab2ab13b1bffe
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
-        'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
+        'Database\\Seeders\\CATEGORIESeeder' => __DIR__ . '/../..' . '/database/seeders/CATEGORIESeeder.php',
+        'Database\\Seeders\\COMMENTSeeder' => __DIR__ . '/../..' . '/database/seeders/COMMENTSeeder.php',
+        'Database\\Seeders\\PROJECTSeeder' => __DIR__ . '/../..' . '/database/seeders/PROJECTSeeder.php',
+        'Database\\Seeders\\PROJECT_CATESeeder' => __DIR__ . '/../..' . '/database/seeders/PROJECT_CATESeeder.php',
+        'Database\\Seeders\\USERSeeder' => __DIR__ . '/../..' . '/database/seeders/USERSeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
         'DeepCopy\\Exception\\PropertyException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
@@ -6209,6 +6222,7 @@ class ComposerStaticInit35c7605daa2378912b2ab2ab13b1bffe
         'TheSeer\\Tokenizer\\TokenCollectionException' => __DIR__ . '/..' . '/theseer/tokenizer/src/TokenCollectionException.php',
         'TheSeer\\Tokenizer\\Tokenizer' => __DIR__ . '/..' . '/theseer/tokenizer/src/Tokenizer.php',
         'TheSeer\\Tokenizer\\XMLSerializer' => __DIR__ . '/..' . '/theseer/tokenizer/src/XMLSerializer.php',
+        'Thiagoprz\\CompositeKey\\HasCompositeKey' => __DIR__ . '/..' . '/thiagoprz/eloquent-composite-key/src/HasCompositeKey.php',
         'TijsVerkoyen\\CssToInlineStyles\\CssToInlineStyles' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/CssToInlineStyles.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Processor.php',
