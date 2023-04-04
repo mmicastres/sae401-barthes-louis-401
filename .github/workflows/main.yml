@@ -25,3 +25,6 @@ jobs:
           remote-user: lyra
           remote-password: lek47269
           remote-path: /home/lyra/www
+      - name: FTP/SFTP file deployer
+        uses: milanmk/actions-file-deployer@1.12
+
