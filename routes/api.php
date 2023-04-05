@@ -44,6 +44,16 @@ Route::delete('/PROJECT/{ID_PRO}', [App\Http\Controllers\PROJECTController::clas
 
 // CATEGORIES path to Controllers
 
+Route::get('/CATEGORIE', [App\Http\Controllers\CATEGORIEController::class, 'listCATE']);
+
+Route::get('/CATEGORIE/{ID_PRO}', [App\Http\Controllers\CATEGORIEController::class, 'oneCATE']);
+
+Route::post('/CATEGORIE', [App\Http\Controllers\CATEGORIEController::class, 'newCATE']);
+
+Route::put('/CATEGORIE', [App\Http\Controllers\CATEGORIEController::class, 'modifCATE']);
+
+Route::delete('/CATEGORIE/{ID_PRO}', [App\Http\Controllers\CATEGORIEController::class, 'supCATE']);
+
 // COMMENTS path to Controllers
 
 // Cross path to Controllers
