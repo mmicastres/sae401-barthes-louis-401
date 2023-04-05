@@ -77,7 +77,6 @@ class USERController extends Controller
         }
     }
     // Modify an USER
-
     public function modifUSER(Request $request)
     {
 
