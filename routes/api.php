@@ -46,3 +46,7 @@ Route::delete('/PROJECT/{ID_PRO}', [App\Http\Controllers\PROJECTController::clas
 
 // COMMENTS path to Controllers
 
+// Cross path to Controllers
+
+Route::get('/Cross/{ID_PRO}', [App\Http\Controllers\CrossController::class, 'crossINFO']);
+

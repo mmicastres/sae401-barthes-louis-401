@@ -9,22 +9,22 @@ use Validator;
 class PROJECTController extends Controller
 {
 
-// Select the details of all project
+    // Select the details of all project
     public function listPROJECT(Request $request)
     {
         $returned = PROJECT::select("ID_USER_IS_POSTED", "NAME_PROJ", "DESCRIPTION_PROJ", "DATE_PROJ", "IMG_PROJ")->get();
         return response()->json($returned);
     }
-// Select the details of one project
+    // Select the details of one project
     public function onePROJECT($ID_PRO)
     {
         $project = PROJECT::select("ID_USER_IS_POSTED", "NAME_PROJ", "DESCRIPTION_PROJ", "DATE_PROJ", "IMG_PROJ")->where("ID_PRO", "=", $ID_PRO)->get();
         return response()->json($project);
     }
-// create a new project
+    // create a new project
     public function newPROJECT(Request $request)
     {
-        $validator = Validator::make($request->all(),[
+        $validator = Validator::make($request->all(), [
             'ID_USER_IS_POSTED' => ['required', 'integer'],
             'NAME_PROJ' => ['required', 'alpha'],
             'DESCRIPTION_PROJ' => ['required', 'alpha_num'],
@@ -55,12 +55,12 @@ class PROJECTController extends Controller
             ], 400);
         }
     }
-// midify a project
+    // modify a project
     public function modifPROJECT(Request $request)
     {
 
-        $validator = Validator::make($request->all(),[
-            'ID_USER' => ['required', 'integer'],
+        $validator = Validator::make($request->all(), [
+            'ID_USER_IS_POSTED' => ['required', 'integer'],
             'NAME_PROJ' => ['required', 'alpha_num'],
             'DESCRIPTION_PROJ' => ['required', 'integer'],
             'DATE_PROJ' => ['required', 'integer'],
@@ -99,7 +99,7 @@ class PROJECTController extends Controller
             ], 400);
         }
     }
-// delete an old project
+    // delete an old project
     public function supPROJECT($ID_PRO)
     {
         $project = PROJECT::where("ID_PRO", "=", $ID_PRO);

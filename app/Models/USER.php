@@ -12,4 +12,5 @@ class USER extends Model
     protected $table = "USER";
 
     protected $primaryKey = "ID_USER";
+    public $timestamps = false;
 }
