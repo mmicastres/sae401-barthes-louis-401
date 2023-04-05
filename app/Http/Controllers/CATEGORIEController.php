@@ -8,6 +8,7 @@ use Validator;
 
 class CATEGORIEController extends Controller
 {
+    
     // Select the details of all categorie
     public function listCATE(Request $request)
     {
