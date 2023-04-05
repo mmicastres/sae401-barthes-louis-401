@@ -4,17 +4,38 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\PROJECT;
+use Validator;
 
 class PROJECTController extends Controller
 {
+
+// Select the details of all project
     public function listPROJECT(Request $request)
     {
-        $project = PROJECT::select("ID_USER_IS_POSTED", "NAME_PROJ", "DESCRIPTION_PROJ", "DATE_PROJ", "IMG_PROJ")->get();
+        $returned = PROJECT::select("ID_USER_IS_POSTED", "NAME_PROJ", "DESCRIPTION_PROJ", "DATE_PROJ", "IMG_PROJ")->get();
+        return response()->json($returned);
+    }
+// Select the details of one project
+    public function onePROJECT($ID_PRO)
+    {
+        $project = PROJECT::select("ID_USER_IS_POSTED", "NAME_PROJ", "DESCRIPTION_PROJ", "DATE_PROJ", "IMG_PROJ")->where("ID_PRO", "=", $ID_PRO)->get();
         return response()->json($project);
     }
-
+// create a new project
     public function newPROJECT(Request $request)
     {
+        $validator = Validator::make($request->all(),[
+            'ID_USER_IS_POSTED' => ['required', 'integer'],
+            'NAME_PROJ' => ['required', 'alpha'],
+            'DESCRIPTION_PROJ' => ['required', 'alpha_num'],
+            'DATE_PROJ' => ['required', 'date_format:Y-m-d'],
+            'IMG_PROJ' => ['required', 'img']
+        ]);
+        if ($validator->fails()) {
+            return $validator->error();
+        }
+
+
         $project = new PROJECT;
 
         $project->ID_USER_IS_POSTED = $request->ID_USER_IS_POSTED;
@@ -34,9 +55,22 @@ class PROJECTController extends Controller
             ], 400);
         }
     }
-
+// midify a project
     public function modifPROJECT(Request $request)
     {
+
+        $validator = Validator::make($request->all(),[
+            'ID_USER' => ['required', 'integer'],
+            'NAME_PROJ' => ['required', 'alpha_num'],
+            'DESCRIPTION_PROJ' => ['required', 'integer'],
+            'DATE_PROJ' => ['required', 'integer'],
+            'IMG_PROJ' => ['required', 'integer']
+        ]);
+        if ($validator->fails()) {
+            return $validator->error();
+        }
+
+
         $project = PROJECT::where("ID_PRO", "=", $request->ID_PRO)->first();
 
         if ($project) {
@@ -65,7 +99,7 @@ class PROJECTController extends Controller
             ], 400);
         }
     }
-
+// delete an old project
     public function supPROJECT($ID_PRO)
     {
         $project = PROJECT::where("ID_PRO", "=", $ID_PRO);
