@@ -12,20 +12,20 @@ class CATEGORIEController extends Controller
     // Select the details of all categorie
     public function listCATE(Request $request)
     {
-        $returned = CATEGORIE::select("ID_CATE ", "ID_USER_CREATED ", "NAME_CATE")->get();
+        $returned = CATEGORIE::select("ID_CATE", "ID_USER_CREATED", "NAME_CATE")->get();
         return response()->json($returned);
     }
     // Select the details of one categorie
     public function oneCATE($ID_CATE)
     {
-        $returned = CATEGORIE::select("ID_CATE ", "ID_USER_CREATED ", "NAME_CATE")->where("ID_CATE", "=", $ID_CATE)->get();
+        $returned = CATEGORIE::select("ID_CATE", "ID_USER_CREATED", "NAME_CATE")->where("ID_CATE", "=", $ID_CATE)->get();
         return response()->json($returned);
     }
     // create a new categorie
     public function newCATE(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'ID_CATE ' => ['required', 'integer'],
+            'ID_CATE' => ['required', 'integer'],
             'ID_USER_CREATED' => ['required', 'integer'],
             'NAME_CATE' => ['required', 'alpha_num']
         ]);
@@ -56,7 +56,7 @@ class CATEGORIEController extends Controller
     {
 
         $validator = Validator::make($request->all(), [
-            'ID_CATE ' => ['required', 'integer'],
+            'ID_CATE' => ['required', 'integer'],
             'ID_USER_CREATED' => ['required', 'integer'],
             'NAME_CATE' => ['required', 'alpha_num']
         ]);

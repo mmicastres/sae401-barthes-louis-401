@@ -56,6 +56,18 @@ Route::delete('/CATEGORIE/{ID_PRO}', [App\Http\Controllers\CATEGORIEController::
 
 // COMMENTS path to Controllers
 
+Route::get('/COMMENT', [App\Http\Controllers\COMMENTController::class, 'listCOM']);
+
+Route::get('/COMMENT/{ID_PRO}', [App\Http\Controllers\COMMENTController::class, 'oneCOM']);
+
+Route::post('/COMMENT', [App\Http\Controllers\COMMENTController::class, 'newCOM']);
+
+Route::put('/COMMENT', [App\Http\Controllers\COMMENTController::class, 'modifCOM']);
+
+Route::delete('/COMMENT/{ID_PRO}', [App\Http\Controllers\COMMENTController::class, 'supCOM']);
+
+// PROJECT_CATE path to Controllers
+
 // Cross path to Controllers
 
 Route::get('/Cross/{ID_PRO}', [App\Http\Controllers\CrossController::class, 'crossINFO']);
