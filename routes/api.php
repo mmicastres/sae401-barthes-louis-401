@@ -68,6 +68,10 @@ Route::delete('/COMMENT/{ID_PRO}', [App\Http\Controllers\COMMENTController::clas
 
 // PROJECT_CATE path to Controllers
 
+Route::get('/PROJ_CATE/{ID_CATE}', [App\Http\Controllers\PROJECT_CATEController::class, 'projectwithCATE']);
+
+Route::delete('/PROJ_CATE/{ID_PRO}/{ID_CATE}', [App\Http\Controllers\PROJECT_CATEController::class, 'supPROJECT_CATE']);
+
 // Cross path to Controllers
 
 Route::get('/Cross/{ID_PRO}', [App\Http\Controllers\CrossController::class, 'crossINFO']);
