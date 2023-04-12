@@ -24,26 +24,26 @@ class USERController extends Controller
     // create a new USER
     public function createUSER(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'PSEUDO_USER' => ['required', 'alpha_num'],
-            'PWD_USER' => ['required', 'alpha_dash'],
-            'NAME_USER' => ['required', 'alpha'],
-            'SURNAME_USER' => ['required', 'alpha'],
-            'MAIL_USER' => ['required', 'email'],
-            'AGE_USER' => ['required', 'integer'],
-            'SUBDATE_USER' => ['required', 'date_format:Y-m-d'],
-            'BIO_USER' => ['required'],
-            'LEVEL_USER' => ['required', 'integer'],
-            'ADMIN' => ['required', 'integer'],
-            'FORMATION_STUDENT' => ['alpha_num'],
-            'YEAR_STUDENT' => ['integer'],
-            'SCHOOL_PROF' => ['alpha_num'],
-            'TEACHING_PROF' => ['alpha_num'],
-            'PROF_ETU' => ['integer']
-        ]);
-        if ($validator->fails()) {
-            return $validator->errors();
-        }
+        // $validator = Validator::make($request->all(), [
+        //     'PSEUDO_USER' => ['required', 'alpha_num'],
+        //     'PWD_USER' => ['required', 'alpha_dash'],
+        //     'NAME_USER' => ['required', 'alpha'],
+        //     'SURNAME_USER' => ['required', 'alpha'],
+        //     'MAIL_USER' => ['required', 'email'],
+        //     'AGE_USER' => ['required', 'integer'],
+        //     'SUBDATE_USER' => ['required', 'date_format:Y-m-d'],
+        //     'BIO_USER' => ['required'],
+        //     'LEVEL_USER' => ['required', 'integer'],
+        //     'ADMIN' => ['required', 'integer'],
+        //     'FORMATION_STUDENT' => ['alpha_num'],
+        //     'YEAR_STUDENT' => ['integer'],
+        //     'SCHOOL_PROF' => ['alpha_num'],
+        //     'TEACHING_PROF' => ['alpha_num'],
+        //     'PROF_ETU' => ['integer']
+        // ]);
+        // if ($validator->fails()) {
+        //     return $validator->errors();
+        // }
 
 
         $user = new USER;
