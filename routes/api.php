@@ -30,7 +30,7 @@ Route::put('/USER', [App\Http\Controllers\USERController::class, 'modifUSER']);
 
 Route::delete('/USER/{ID_USER}', [App\Http\Controllers\USERController::class, 'supUSER']);
 
-Route::post('/USER/{ID_USER}', [App\Http\Controllers\USERController::class, 'connect']);
+Route::post('/CONNEXION', [App\Http\Controllers\USERController::class, 'connect']);
 
 // PROJECTS path to Controllers
 
