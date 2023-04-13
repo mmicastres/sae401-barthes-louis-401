@@ -159,7 +159,7 @@ class USERController extends Controller
     // Connexion
     public function connect(Request $request)
     {
-        $user = USER::where("PWD_USER", "=",$request->PWD_USER)->where("PSEUDO_USER", "=",$request->ID_USER)->get()->first();
+        $user = USER::where("PWD_USER", "=",$request->PWD_USER)->where("PSEUDO_USER", "=",$request->PSEUDO_USER)->get()->first();
         return response()->json($user);
     }
 }
